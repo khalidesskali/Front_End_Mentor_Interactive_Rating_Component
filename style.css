@@ -1,0 +1,132 @@
+:root {
+  --orange: #fc7614;
+  --white: #ffffff;
+  --light-grey: #959eac;
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: #121417;
+}
+body {
+  background-color: var(--very-dark-blue);
+  font-family: "Overpass", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  color: white;
+  padding-inline: 12px;
+}
+.card {
+  background-color: var(--dark-blue);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  padding: 40px;
+}
+.card .star {
+  background: #262f38;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card .star img {
+  width: 30px;
+}
+.card h2 {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  max-width: 350px;
+  line-height: 1.7;
+  color: var(--light-grey);
+}
+.card .selections {
+  margin-bottom: 20px;
+}
+.card .selections .inputs button {
+  display: inline;
+  border: none;
+  margin-right: 15px;
+  border-radius: 50%;
+  font-weight: 700;
+  width: 60px;
+  height: 60px;
+  transition: 0.3s;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+.normal {
+  color: var(--light-grey);
+  background: #262f38;
+}
+.choosen {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+.card .selections .inputs button:hover {
+  background-color: var(--orange);
+  color: var(--dark-blue);
+}
+.card .selections > button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border: none;
+  background: var(--orange);
+  color: var(--very-dark-blue);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  cursor: pointer;
+}
+.card .selections > button:hover {
+  background-color: var(--white);
+}
+.card .thanks {
+  text-align: center;
+  display: none;
+}
+.card .thanks .selection {
+  display: block;
+  color: var(--orange);
+  background: #262f38;
+  width: fit-content;
+  margin: 30px auto;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+.card .thanks h1 {
+  font-weight: 700;
+}
+.card .thanks p {
+  color: var(--light-grey);
+  font-size: 16px;
+  max-width: 360px;
+}
+@media (max-width: 506px) {
+  .card .selections .inputs button {
+    width: 40px;
+    height: 40px;
+  }
+  .card p {
+    max-width: 320px;
+  }
+  .card .thanks p {
+    max-width: 320px;
+  }
+}
